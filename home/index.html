@@ -8,16 +8,106 @@
     <title>Home | CyberHazen™</title>
     <!-- BASE STYLE -->
     <link rel="stylesheet" href="../assets/css/base.css">
+    <link rel="stylesheet" href="../assets/css/main.css">
     <link rel="stylesheet" href="css/style.css">
-    <!-- COMPONENTS -->
-    <script src="../assets/components/footer.js"></script>
-    <script src="../assets/components/navbar.js"></script>
+    <!-- FAVICON -->
+    <link rel="shortcut icon" href="../assets/icons/favicon.svg" type="image/x-icon">
 </head>
 
 <body>
+    <!-- HERO SECTION -->
+    <section>
+        <div class="container-fluid d-flex" vh="100vh">
+            <div class="m-auto">
+                <marquee behavior="" direction="left" fs="10rem" scrollamount="12">
+                    Welcome to CyberHazen™
+                </marquee>
+                <marquee behavior="" direction="right" class="" fs="2rem" scrollamount="8">
+                    &emsp;<a href="../about/" class="" hover="hsl(var(--slate)80%)" animation="color 0.3s ease"> Sign up.</a>
+                    &emsp;<a href="../about/" class="" hover="hsl(var(--slate)80%)" animation="color 0.3s ease"> About.</a>
+                    &emsp;<a href="../about/" class="" hover="hsl(var(--slate)80%)" animation="color 0.3s ease"> Support.</a>
+                    &emsp;<a href="../about/" class="" hover="hsl(var(--slate)80%)" animation="color 0.3s ease"> GamingZone.</a>
+                    &emsp;<a href="../about/" class="" hover="hsl(var(--slate)80%)" animation="color 0.3s ease"> HBuds.</a>
+                    &emsp;<a href="../about/" class="" hover="hsl(var(--slate)80%)" animation="color 0.3s ease"> HWatch.</a>
+                    &emsp;<a href="../about/" class="" hover="hsl(var(--slate)80%)" animation="color 0.3s ease"> HTab.</a>
+                    &emsp;<a href="../about/" class="" hover="hsl(var(--slate)80%)" animation="color 0.3s ease"> HPhone.</a>
+                    &emsp;<a href="../about/" class="" hover="hsl(var(--slate)80%)" animation="color 0.3s ease">HazenBook.</a>
+                    &emsp;<a href="../store/" class="" hover="hsl(var(--slate)80%)" animation="color 0.3s ease"> Store.</a>
+                    &emsp;<a href="#"class="" hover="hsl(var(--slate)80%)" animation="color 0.3s ease"> Home.</a>
+                </marquee>
+            </div>
+        </div>
+    </section>
+    <!-- HERO SECTION END-->
     <!-- NAVBAR -->
-    <nav></nav>
+    <header>
+        <nav>
+            <div class="container d-flex align-items-center justify-content-between justify-content-lg-center gap-lg-4"
+                linear="1s">
+                <a href="${home}">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="15" height="25" viewBox="0 0 21 25" fill="none">
+                        <path
+                            d="M2 0C3.10457 4.82823e-08 4 0.895431 4 2L4 23C4 24.1046 3.10457 25 2 25C0.89543 25 -4.82823e-08 24.1046 0 23L9.17939e-07 2C9.66221e-07 0.89543 0.895431 -4.82823e-08 2 0Z"
+                            fill="var(--white)" />
+                        <path
+                            d="M19 0C20.1046 4.82823e-08 21 0.895431 21 2L21 23C21 24.1046 20.1046 25 19 25C17.8954 25 17 24.1046 17 23V2C17 0.89543 17.8954 -4.82823e-08 19 0Z"
+                            fill="var(--white)" />
+                        <path
+                            d="M9.4658 10.6773C8.33266 11.2579 7.88472 12.6471 8.46531 13.7802C9.0459 14.9134 10.4352 15.3613 11.5683 14.7807C12.7014 14.2001 13.1494 12.8109 12.5688 11.6777C11.9882 10.5446 10.5989 10.0967 9.4658 10.6773Z"
+                            fill="var(--white)" />
+                    </svg>
+                </a>
+                <ul class=" d-lg-flex gap-4 d-none">
+                    <li><a href="#" class="text-decoration-none nav-hover">Home</a></li>
+                    <li><a href="../shop/" class="text-decoration-none nav-hover" nav-id="1">Store</a></li>
+                    <li><a href="../hbook/" class="text-decoration-none nav-hover" nav-id="2">HazenBook</a></li>
+                    <li><a href="../shop/" class="text-decoration-none nav-hover" nav-id="3">HPhone</a></li>
+                    <li><a href="../shop/" class="text-decoration-none nav-hover" nav-id="4">HTab</a></li>
+                    <li><a href="../shop/" class="text-decoration-none nav-hover" nav-id="5">HWatch</a></li>
+                    <li><a href="../shop/" class="text-decoration-none nav-hover" nav-id="6">HBuds</a></li>
+                    <li><a href="../shop/" class="text-decoration-none nav-hover" nav-id="7">Gaming Zone</a></li>
+                    <li><a href="../support/" class="text-decoration-none nav-hover" nav-id="8">Support</a></li>
+                    <li><a href="../about/" class="text-decoration-none nav-hover">About</a></li>
+                    <li><a href="../auth/register/" class="text-decoration-none nav-hover">Sign up</a></li>
+                </ul>
+                <div class="d-flex gap-4">
+                    <li><a href="../auth/register/" class="text-decoration-none nav-hover"><i
+                                class="fa-regular fa-search"></i></a></li>
+                    <li><a href="../auth/register/" class="text-decoration-none nav-hover"><i
+                                class="fa-regular fa-shopping-bag"></i></a></li>
+                    <li>
+                        <div class="burger d-flex d-lg-none">
+                            <input type="checkbox">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </li>
+                </div>
+            </div>
+        </nav>
+    </header>
     <!-- NAVBAR END-->
+    <div class="container" vh="200vh"></div>
+    <!-- <script src="../assets/components/navbar.js"></script> -->
+    <script src="../assets/components/footer.js"></script>
+    <script src="../assets/js/index.js"></script>
+    <script>
+        window.onscroll = function () { myFunction() };
+
+        var navbar = document.querySelector("nav");
+        var sticky = navbar.offsetTop;
+
+        function myFunction() {
+            if (window.pageYOffset >= sticky) {
+                navbar.classList.add("position-fixed");
+                document.querySelector('header nav div').style.transform = "translateX(0%)"
+            } else {
+                navbar.classList.remove("position-fixed");
+                document.querySelector('nav div').style.transform = "translateX(100%)"
+            }
+        }
+    </script>
 </body>
 
 </html>
