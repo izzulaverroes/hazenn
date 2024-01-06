@@ -103,16 +103,18 @@ nav * {
     -o-transition: all .4s ease-in-out;
 }
 
-header:first-child nav div{
+header:first-child nav div {
     transform: translateX(100%);
 }
-.nav-hover{
+
+.nav-hover {
     transition: all .4s ease-in-out;
     -webkit-transition: all .4s ease-in-out;
     -moz-transition: all .4s ease-in-out;
     -ms-transition: all .4s ease-in-out;
     -o-transition: all .4s ease-in-out;
 }
+
 .nav-hover:hover,
 .nav-hover:hover * {
     color: hsl(var(--slate)100%);
@@ -174,4 +176,3 @@ header:first-child nav div{
     transform-origin: 7.5px -1.5px;
     width: 26px;
 }
-

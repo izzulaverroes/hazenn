@@ -1,0 +1,383 @@
+/*-----------------------------------------------
+    TABLE OF CONTENT
+---------------------------------------------- */
+:root {
+    --navbar: 0;
+    --hero: 0;
+    --: 0;
+}
+
+/*-----------------------------------------------
+    FONT SETTINGS
+---------------------------------------------- */
+@import url(../assets/fonts/poppins/stylesheet.css);
+
+/*-----------------------------------------------
+    FONT SETTINGS
+---------------------------------------------- */
+:root {
+    --font-navbar: lighter .8rem "Poppins";
+}
+
+/*-----------------------------------------------
+    COLORS SETTINGS
+---------------------------------------------- */
+:root {
+    --white: hsl(0, 0%, 100%);
+    --slate: 0, 0%, ;
+    --slate-100: hsl(0, 0%, 95%);
+    --slate-150: hsl(0, 0%, 90%);
+    --slate-200: hsl(0, 0%, 85%);
+    --slate-250: hsl(0, 0%, 80%);
+    --slate-300: hsl(0, 0%, 75%);
+    --slate-350: hsl(0, 0%, 70%);
+    --slate-400: hsl(0, 0%, 65%);
+    --slate-450: hsl(0, 0%, 60%);
+    --slate-500: hsl(0, 0%, 55%);
+    --slate-550: hsl(0, 0%, 50%);
+    --slate-600: hsl(0, 0%, 45%);
+    --slate-650: hsl(0, 0%, 40%);
+    --slate-700: hsl(0, 0%, 35%);
+    --slate-750: hsl(0, 0%, 30%);
+    --slate-800: hsl(0, 0%, 25%);
+    --slate-850: hsl(0, 0%, 20%);
+    --slate-900: hsl(0, 0%, 15%);
+    --slate-950: hsl(0, 0%, 5%);
+    --black: hsl(0, 0%, 0%);
+    --blac: hsla(0, 0%, 0%, 0.579);
+
+    --blue: 196, 100%, ;
+    --blue-100: hsl(196, 100%, 90%);
+    --blue-200: hsl(196, 100%, 80%);
+    --blue-300: hsl(196, 100%, 70%);
+    --blue-400: hsl(196, 100%, 60%);
+    --blue-500: hsl(196, 100%, 50%);
+    --blue-600: hsl(196, 100%, 40%);
+    --blue-700: hsl(196, 100%, 30%);
+    --blue-750: hsl(196, 100%, 25%);
+    --blue-800: hsl(196, 100%, 20%);
+    --blue-850: hsl(196, 100%, 15%);
+    --blue-900: hsl(196, 100%, 10%);
+}
+
+/*-----------------------------------------------
+    GLOBAL RESET
+---------------------------------------------- */
+* {
+    padding: 0;
+    margin: 0;
+    font-family: "Poppins";
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    opacity: .9;
+}
+
+::-webkit-scrollbar-corner,
+::-webkit-scrollbar,
+::-webkit-scrollbar-track {
+    appearance: none;
+}
+
+.cursor,
+.cursor-outline {
+    position: fixed;
+    border-radius: 100%;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    -ms-border-radius: 100%;
+    -o-border-radius: 100%;
+    position: fixed;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    mix-blend-mode: difference;
+    z-index: 100000000000000 !important;
+}
+
+.cursor {
+    width: 15px;
+    aspect-ratio: 1/1;
+    background: var(--black);
+    mix-blend-mode: difference;
+}
+
+.cursor-outline {
+    width: 35px;
+    aspect-ratio: 1/1;
+    background: transparent;
+    border: var(--black) 2px solid;
+    mix-blend-mode: difference;
+}
+
+.cursor .hover {
+    transition: transform 150ms ease-in-out;
+    -webkit-transition: transform 150ms ease-in-out;
+    -moz-transition: transform 150ms ease-in-out;
+    -ms-transition: transform 150ms ease-in-out;
+    -o-transition: transform 150ms ease-in-out;
+    mix-blend-mode: difference;
+}
+
+.hover {
+    transition: all .2s linear;
+    transform: scale(4);
+}
+
+.hoverO {
+    visibility: hidden;
+}
+
+
+/* ----------------------------------------------
+LOADER
+-----------------------------------------------*/
+.loader {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background: #ffffff;
+    z-index: 1000000;
+    transition: all .7s ease-in-out;
+}
+
+.loader span {
+    width: 45px;
+    height: 45px;
+    border: #acacac 8px solid;
+    border-top: #333444 8px solid;
+    border-radius: 100%;
+    animation: turn linear 1s infinite;
+}
+
+.loader .text {
+    background-image: linear-gradient(90deg, transparent 0% 16.66%, #444444 33.33% 50%, transparent 66.66% 75%);
+    background-size: 500%;
+    font-weight: bold;
+    line-height: 1em;
+    text-transform: uppercase;
+    padding-inline-start: 16px;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+}
+
+.loader .text:nth-child(1) {
+    animation: loadingText linear 2s infinite;
+    font-size: calc(2rem + 5vw);
+}
+
+.loader .text:nth-child(2) {
+    font-size: 2rem;
+    animation: loadingText linear 2.5s infinite;
+}
+
+@keyframes loadingText {
+    0% {
+        background-position: 100%;
+    }
+
+    100% {
+        background-position: 0%;
+    }
+}
+
+@keyframes turn {
+    from {
+        transform: rotate(0turn)
+    }
+
+    to {
+        transform: rotate(1turn)
+    }
+}
+
+/*-----------------------------------------------
+    NAVBAR
+---------------------------------------------- */
+.direction {
+    --navbar: 0;
+}
+
+nav {
+    position: fixed;
+    width: 38px;
+    z-index: 100000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    left: 0;
+    margin: 2vw 0 0 2vw;
+    flex-direction: column;
+    background: hsl(var(--slate)100%);
+    padding: 13px 25px;
+    transform: translateY(-250%);
+    transition: transform .4s linear;
+    border-radius: 5rem;
+    filter: drop-shadow(1px 2px 2px rgba(0, 0, 0, 0.25));
+    -webkit-filter: drop-shadow(1px 2px 2px rgba(0, 0, 0, 0.25));
+}
+
+.nav-hover {
+    transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    -moz-transition: all .4s ease-in-out;
+    -ms-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+}
+
+.nav-hover:hover,
+.nav-hover:hover * {
+    color: hsl(var(--slate)100%);
+}
+
+/*----- BURGER -----*/
+
+.burger {
+    display: flex;
+    flex-direction: column;
+    width: 32px;
+    height: 24px;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    margin: 0 2px;
+}
+
+
+.burger span {
+    width: 100%;
+    height: 3.2px;
+    background: hsl(var(--slate)20%);
+    border-radius: 4rem;
+    transition: all .255s linear;
+}
+
+.burger span:nth-child(2) {
+    margin: auto;
+    width: 80%;
+}
+
+.burger span:nth-child(3) {
+    width: 60%;
+}
+
+.burger:hover span {
+    background: hsl(var(--slate)40%);
+}
+
+.active span:nth-child(1) {
+    transform: rotate(45deg);
+    /* transform-origin: -4.5px 10px; */
+    transform-origin: 0 6px;
+    width: 26px;
+}
+
+.active span:nth-child(2) {
+    transform: translateX(-100%);
+    opacity: 0;
+}
+
+.active span:nth-child(3) {
+    transform: rotate(-45deg);
+    /* transform-origin: 9.5px 2px; */
+    transform-origin: .3px 0;
+    width: 26px;
+}
+
+[burger-item] {
+    display: none;
+}
+
+.burger-link-hover {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background-color: rgba(192, 192, 192, 0.3);
+    backdrop-filter: blur(10px);
+    z-index: -10;
+    font-size: 8vh;
+    transition: all .4s ease;
+    opacity: 0;
+}
+
+/* ----------------------------------------------
+    NEW ARRIVALS
+-----------------------------------------------*/
+[title="new arrivals"] {
+    color: hsl(var(--slate)100%);
+    animation: scroll1;
+    animation-timeline: view();
+}
+
+@keyframes scroll1 {
+    0% {
+        transform: translateX(100%);
+    }
+
+    100% {
+        transform: translateX(0%);
+    }
+}
+
+[showcase="hphone"] {
+    animation: scroll2;
+    -webkit-animation: scroll2;
+    animation-timeline: view();
+}
+
+@keyframes scroll2 {
+    0% {
+        transform: translateX(-270%);
+    }
+
+    100% {
+        transform: translateX(0%);
+    }
+}
+
+.burger-nav-active {
+    opacity: 1;
+    z-index: 10000;
+}
+
+
+/* ----------------------------------------------
+FOOTER
+-----------------------------------------------*/
+.footer-item {
+    display: flex;
+    flex-direction: column;
+}
+
+footer {
+    background-color: #f5f5f5;
+    color: #333444;
+    font-size: 90%;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 1.3fr 1fr 1fr;
+    gap: 20px;
+    padding: 20px;
+}
+
+
+@media screen and (max-width: 1190px) {
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+}

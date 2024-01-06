@@ -3,27 +3,43 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
     <!-- TITLE -->
     <title>Hazen</title>
     <!-- BASE STYLE -->
     <link rel="stylesheet" href="../assets/css/base.css">
     <link rel="stylesheet" href="main.css">
     <!-- FAVICON -->
-    <link rel="shortcut icon" href="../assets/icons/favicon.svg" type="image/x-icon">
+    <link rel="prefetch" as="style" onload="this.rel = 'shotcut icon'" href="../assets/icons/favicon.svg"
+        type="image/x-icon">
+    <!-- PRELOAD AMAGE-->
+    <link rel="preload" as="image" href="../assets/img/hphone-1.png">
+    <link rel="preload" as="image" href="../assets/img/hphone-2.png">
+    <link rel="preload" as="image" href="../assets/img/hphone-3.png">
+    <link rel="preload" as="image" href="../assets/img/hphone-4.png">
+    <link rel="preload" as="image" href="../assets/img/hphone-5.png">
 </head>
 
+
 <body>
+
+    <!-- LOADER -->
+    <div class="loader">
+        <!-- <span></span> -->
+        <div class="text">Hazen</div>
+        <div class="text">Technologies</div>
+    </div>
+    <!-- LOADER END-->
     <!-- HERO SECTION -->
     <header>
         <div class="container-fluid d-flex" vh="100vh">
             <div class="m-auto">
-                <marquee behavior="" direction="left" fs="10rem" scrollamount="12">
+                <marquee behavior="" direction="left" fs="9rem" scrollamount="12">
                     Welcome to CyberHazen™ <span
-                        style="-webkit-text-stroke-width: 6px;-webkit-text-stroke-color: #222222;color: transparent;">&nbsp;
+                        style="-webkit-text-stroke-width: .25rem;-webkit-text-stroke-color: #222222;color: transparent;">&nbsp;
                         Welcome to CyberHazen™</span>
                 </marquee>
-                <marquee behavior="" direction="right" class="" fs="2rem" scrollamount="8">
+                <marquee behavior="" direction="right" class="" fs="1.8rem" scrollamount="8">
                     &emsp;<a href="../about/" class="" hover="hsl(var(--slate)80%)" animation="color 0.3s ease"> Sign
                         up.</a>
                     &emsp;<a href="../about/" class="" hover="hsl(var(--slate)80%)" animation="color 0.3s ease">
@@ -57,24 +73,80 @@
             <span></span>
             <span></span>
         </div>
-        <ul class="nav-items list-none mt-4 text-center" style="font-size: 1.25rem;" burger-item>
-            <li class="mb-3 "><a href="#"><i class="fa-regular fa-house d-inline mx-2"></i></a></li>
-            <li class="mb-3 "><a href="#"><i class="fa-regular fa-store d-inline mx-2"></i></a></li>
-            <li class="mb-3 "><a href="#"><i class="fa-regular fa-laptop d-inline mx-2"></i></a></li>
-            <li class="mb-3 "><a href="#"><i class="fa-regular fa-mobile d-inline mx-2"></i></a></li>
-            <li class="mb-3 "><a href="#"><i class="fa-regular fa-tablet d-inline mx-2"></i></a></li>
-            <li class="mb-3 "><a href="#"><i class="fa-regular fa-watch-apple d-inline mx-2"></i></a></li>
-            <li class="mb-3 "><a href="#"><i class="fa-regular fa-headset d-inline mx-2"></i></a></li>
-            <li class="mb-3 "><a href="#"><i class="fa-regular fa-gamepad d-inline mx-2"></i></a></li>
-            <li class="mb-3 "><a href="#"><i class="fa-regular fa-comments-question d-inline mx-2"></i></a></li>
-            <li class="mb-3 "><a href="#"><i class="fa-regular fa-circle-info d-inline mx-2"></i></a></li>
-            <li class="mb-3 "><a href="#"><i class="fa-regular fa-user-plus d-inline mx-2"></i></a></li>
+        <ul class="nav-items list-none mt-4 text-center" style="font-size: 1.2rem;" burger-item>
+            <li class="mb-3 ">
+                <a href="#">
+                    <i class="fa-regular fa-house d-inline mx-2" burger-nav-name="Home."></i>
+                </a>
+            </li>
+            <li class="mb-3 ">
+                <a href="#">
+                    <i class="fa-regular fa-store d-inline mx-2" burger-nav-name="Store."></i>
+                </a>
+            </li>
+            <li class="mb-3 ">
+                <a href="#">
+                    <i class="fa-regular fa-laptop d-inline mx-2" burger-nav-name="HazenBook."></i>
+                </a>
+            </li>
+            <li class="mb-3 ">
+                <a href="#">
+                    <i class="fa-regular fa-mobile d-inline mx-2" burger-nav-name="HPhone."></i>
+                </a>
+            </li>
+            <li class="mb-3 ">
+                <a href="#">
+                    <i class="fa-regular fa-tablet d-inline mx-2" burger-nav-name="HTab."></i>
+                </a>
+            </li>
+            <li class="mb-3 ">
+                <a href="#">
+                    <i class="fa-regular fa-watch-apple d-inline mx-2" burger-nav-name="HWatch."></i>
+                </a>
+            </li>
+            <li class="mb-3 ">
+                <a href="#">
+                    <i class="fa-regular fa-headset d-inline mx-2" burger-nav-name="HBuds."></i>
+                </a>
+            </li>
+            <li class="mb-3 ">
+                <a href="#">
+                    <i class="fa-regular fa-gamepad d-inline mx-2" burger-nav-name="GamingZone."></i>
+                </a>
+            </li>
+            <li class="mb-3 ">
+                <a href="#">
+                    <i class="fa-regular fa-comments-question d-inline mx-2" burger-nav-name="Supports."></i>
+                </a>
+            </li>
+            <li class="mb-3 ">
+                <a href="#">
+                    <i class="fa-regular fa-circle-info d-inline mx-2" burger-nav-name="About."></i>
+                </a>
+            </li>
+            <li class="mb-3 ">
+                <a href="#">
+                    <i class="fa-regular fa-user-plus d-inline mx-2" burger-nav-name="Sign In."></i>
+                </a>
+            </li>
         </ul>
     </nav>
     <!-- NAVBAR END-->
+    <!-- BURGER LINK HOVER -->
+    <div class="burger-link-hover" id="modal">
+    </div>
+    <!-- BURGER LINK HOVER END-->
+    <!-- EVENT -->
+    <section style="background: #e7e7e7;">
+        <div class="container text-center py-3" >
+            <i class="fa" fs="8rem">2 <i class="fa-solid fa-calendar"></i> 24</i>
+            <p class="mt-3 fs-1" style="color: #595959;">New year. New innovations.</p>
+        </div>
+    </section>
+    <!-- EVENT END-->
     <!-- NEW ARRIVALS -->
     <section style="background: hsl(var(--slate)10%); padding: 3rem 0;">
-        <marquee class="text-center" title="new arrivals" fs="9rem" scrollamount="0">New Arrivals</marquee>
+        <marquee class="text-center" title="new arrivals" fs="8rem" scrollamount="0" style="font-weight: 500;">New Arrivals</marquee>
         <div class="d-flex position-relative" showcase="hphone">
             <img src="../assets/img/hphone-2.png" alt="" class="w-75">
             <img src="../assets/img/hphone-1.png" alt="" class="w-75">
@@ -83,30 +155,33 @@
             <img src="../assets/img/hphone-5.png" alt="" class="w-75">
         </div>
         <div class="container">
-            <h1 class="mt-10 pt-10" fs="4rem" style="color: #999999;" data-aos="fade-up" data-aos-delay="300"
-                data-aos-duration="1000">Explore more.</h1>
-            <div class="row mt-10 px-7">
+            <h1 class="mt-10" fs="3rem" style="color: #999999;" data-aos="fade-up" data-aos-delay="300"
+                data-aos-duration="600">Explore more.</h1>
+            <div class="row mt-10 px-lg-7">
                 <div class="col-12 col-lg-6">
-                    <h1 style="color: #999999;">All New</h1>
-                    <h1 style="color: white ; font-size: 3rem;">HPhone Pro <br>Gen 1</h1>
-                    <h1 style="color: #999999;">With HChips Gen 1 16 Cores</h1>
+                    <h2 style="color: #999999;">All New</h2>
+                    <h2 style="color: white ; font-size: 2.5rem;">HPhone Pro <br>Gen 1</h2>
+                    <h2 style="color: #999999;">With HChips Gen 1 16 Cores</h2>
                 </div>
-                <div class="col-12 col-lg-5">
-                    <p class="fs-4" style="color:#999999 ;">HPhone Pro Gen 1 is <span style="color: white;">the first
+                <div class="col-12 col-lg-6">
+                    <p fs="1.4rem" style="color:#999999 ;">HPhone Pro Gen 1 is <span style="color: white;">the first
                             HPhone to feature an aerospace-grade titanium
                             design,</span> using the same alloy that spacecraft use for missions to Mars.
 
                         Titanium has one of the best strength-to-weight ratios of any metal, making these our <span
                             style="color: white;">lightest
                             Pro models ever.</span> You'll notice the difference the moment you pick one up.</p>
-
                 </div>
             </div>
             <div class="mt-8 d-flex">
-                <a href="#" class="m-auto">
+                <a href="#" class="ms-auto">
                     <div class="more-button">
-                        <span>+</span>
-                        <span>Learn More.</span>
+                        <span>Interest ></span>
+                    </div>
+                </a>
+                <a href="#" class="ms-2 me-auto">
+                    <div class="more-button ratio-1x1 ">
+                        <span><i class="fa-regular fa-shopping-bag mx-1"></i></span>
                     </div>
                 </a>
             </div>
@@ -115,27 +190,165 @@
     <!-- NEW ARRIVALS END-->
     <!-- ANOTHER -->
     <section>
-        <div class="w-50">
-            <!-- <div class="all-access-pass__container">
-                <div class="all-access-pass" id="aap-design" data-aap-type="base" data-aap-level="1" data-aap-kf="{&quot;start&quot;: &quot;a0t - 100vh + 40a0h&quot;, &quot;end&quot;: &quot;a0b - 50vh&quot;, &quot;anchors&quot;: [&quot;.subsection-design&quot;]}" style="opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0); --aap-hint-opacity: 1; --aap-hint-scale: 0;">
-                    <div class="all-access-pass__background" style="transform: matrix(1, 0, 0, 1, 0, 0); height: 56px; width: 287.837px;">
-                        <button class="aap-base" data-modal-open="" data-focus-expression="{&quot;expression&quot;: &quot;a0b - 80vh&quot;, &quot;anchors&quot;: [&quot;.subsection-design&quot;], &quot;tabindex&quot;: &quot;0&quot;}" data-focus-enabled-when="enhanced" data-analytics-title="expand - design and display modal" data-analytics-click="prop3:expand - design and display modal" data-analytics-intrapage-link="" tabindex="0">
-                            <span class="aap-base__text" style="opacity: 1;">More on design &amp; display</span>
-                            <span class="aap-base__icon" style="transform: matrix(1, 0, 0, 1, 0, -18);">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36">
-                                    <path id="_art" class="st1" d="M25.5,16.5l-5.9,0l0-5.9C19.6,9.7,18.9,9,18,9c-0.9,0-1.5,0.7-1.5,1.5l0,5.9l-5.9,0h0
-                                                C9.7,16.4,9,17.1,9,18c0,0.9,0.7,1.5,1.5,1.5l5.9,0l0,5.9c0,0.9,0.7,1.5,1.5,1.5c0.9,0,1.5-0.7,1.5-1.5l0-5.9l5.9,0h0
-                                                c0.9,0,1.5-0.7,1.5-1.5C27,17.2,26.3,16.5,25.5,16.5L25.5,16.5z"></path>
-                                </svg>
-                            </span>
-                        </button>
+        <a href="../shop/">
+            <div class="container-fluid d-flex" vh="500px"
+                style="background: center / cover no-repeat url(../assets/img/hbook.jpg);">
+                <div class="mx-auto text-center mt-5">
+                    <h1 class="" fs="2.8rem" style=" font-weight:600">HazenBook</h1>
+                    <p class="fs-4" style="color: #595959;">Another level. Another experience.</p>
+                    <div class="text-center mt-2 fs-5">
+                        <a href="" class="me-4">Interest.</a>
+                        <a href="">Get.</a>
                     </div>
                 </div>
-            </div> -->
+            </div>
+        </a>
+        <div class="row mt-3">
+            <div class="col-12 col-md-6 d-flex flex-column text-center" vh="500px"
+                style="background: center / cover no-repeat url(../assets/img/hbuds.jpg);">
+                <p class="mt-4" style="color: white; font-weight:500" fs="2.8rem">HBuds Pro</p>
+                <p class="fs-4" style="color: #595959;">Personalize your sound.</p>
+                <div class="text-center mt-2 fs-5" style="color: white;">
+                    <a href="" class="me-4">Interest.</a>
+                    <a href="">Get.</a>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 text-center" vh="500px"
+                style="background: center / cover no-repeat url(../assets/img/htab.jpg);">
+                <p class="mt-4" fs="2.8rem" style=" font-weight:500">HTab</p>
+                <p class="fs-4" style="color: #595959;">Simplify your actifity.</p>
+                <div class="text-center mt-2 fs-5">
+                    <a href="" class="me-4">Interest.</a>
+                    <a href="">Get.</a>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-3">
+            <div class="col-12 col-md-6 text-center" vh="500px"
+                style="background: center / cover no-repeat url(../assets/img/hpayment.jpg);">
+                <p class="mt-4" fs="2.8rem" style=" font-weight:500">Hazen Payment</p>
+                <p class="fs-4" style="color: #595959;">All in one card. Simple.</p>
+                <div class="text-center mt-2 fs-5">
+                    <a href="" class="me-4">Interest.</a>
+                    <a href="">Get.</a>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 text-center" vh="500px"
+                style="background: center / cover no-repeat url(../assets/img/trade.jpg);">
+                <p class="mt-4" fs="2.8rem" style=" font-weight:500">Upgrade</p>
+                <p fs="1.4rem" style="color: #595959;">Trade your old device<br>with new device</p>
+                <div class="text-center mt-2 fs-5">
+                    <a href="" class="me-4">Upgrade now +</a>
+                </div>
+            </div>
         </div>
     </section>
     <!-- ANOTHER END-->
-    <div class="container" vh="200vh"></div>
+    <!-- FOOTER -->
+    <footer class="px-2 px-lg-7 pt-5">
+        <p style="padding: 0 40px 30px 24px;">Hazen Technologies is a forward-thinking technology company committed
+            to innovating and engineering
+            cutting-edge solutions that shape the future. With a relentless dedication to excellence and a passion
+            for pushing the boundaries of what's possible, Hazen Technologies is at the forefront of creating
+            transformative products and services that drive progress in various industries.
+            <br>
+            Our Mission:
+            To empower individuals, businesses, and communities through technology by delivering innovative,
+            reliable, and sustainable solutions that enhance efficiency, convenience, and quality of life.
+            <br>
+            Our Vision:
+            To be a global leader in technology, pioneering advancements that address real-world challenges and
+            drive positive change. We aspire to inspire and empower the world with our technological innovations.
+        </p>
+        <hr style="border: 1.5px solid #cbcbcb;width: 96%; margin: auto;border-radius: 2px;">
+        <div class="footer-grid">
+            <div class="footer-item">
+                <div class="nav-logo">
+                    <a href="${home}">
+                        <h1>CyberHazen™</h1>
+                    </a>
+                </div>
+                <p>We are a dynamic team of visionaries, engineers, and creatives who thrive on challenges. Our
+                    passion lies in developing technology-intensive products and services that shape the future.</p>
+                <br>
+                <h1>Special Event</h1>
+                <a href="${about}" class="link">About</a>
+                <a href="#" class="link">Special Event</a>
+                <a href="#" class="link">Exclusive Event</a>
+                <a href="#" class="link">Monthly Event</a>
+                <a href="#" class="link">Yearly Event</a>
+                <br>
+                <h1>Home Electonics</h1>
+                <a href="${product}" class="link">Hazen SmartHome Hub</a>
+                <a href="${product}" class="link">Hazen E-Cars</a>
+                <a href="${product}" class="link">Hazen AI Assist</a><br>
+                <h1>Social Media</h1>
+                <div class="sosmed">
+                    <a href="https://facebook.com"><i class="fa-brands fa-facebook-f link"></i></a>
+                    <a href="https://instagram.com"><i class="fa-brands fa-instagram link"></i></a>
+                    <a href="https://twitter.com"><i class="fa-brands fa-x-twitter link"></i></a>
+                    <a href="https://pinterest.com"><i class="fa-brands fa-pinterest-p link"></i></a>
+                    <a href="https://linkedin.com"><i class="fa-brands fa-linkedin-in link"></i></a>
+                    <a href="https://dribble.com"><i class="fa-brands fa-dribbble link"></i></a>
+                    <a href="https://fontawesome.com"><i class="fa-brands fa-font-awesome link"></i></a>
+                    <a href="https://izzulaverroes.github.io/cyberhazen"><i class="fa-brands fa-github link"></i></a>
+                    <a href="https://npm.com"><i class="fa-brands fa-npm link"></i></a>
+                    <a href="https://woi.com"><i class="fa-regular fa-globe link"></i></a><br>
+                </div>
+            </div>
+            <div class="footer-item">
+                <h1>Contact Us</h1>
+                <h4>Phone Number :</h4>
+                <p> +62 813 3644 6666</p>
+                <h4>Email :</h4>
+                <p> ceo@hazen.tech</p>
+                <h4>Company Address:</h4>
+                <p> Malang, East Java, Indonesia </p><br>
+                <h1>Handphones</h1>
+                <a href="${product}" class="link">Hazen Z-One</a>
+                <a href="${product}" class="link">Hazen Z-One Pro</a>
+                <a href="${product}" class="link">Hazen Z-One Photography</a>
+                <a href="${product}" class="link">Hazen G-One Titan</a>
+                <a href="${product}" class="link">Hazen X-One</a>
+                <a href="${product}" class="link">Hazen Flip-V</a><br>
+                <h1>Computers</h1>
+                <a href="${product}" class="link">Hazen Quantum Servers</a>
+                <a href="${product}" class="link">Hazen Desktop Pro</a>
+                <a href="${product}" class="link">Hazen Gaming Titan Pro</a>
+                <a href="${product}" class="link">Hazen X-Titan Max</a>
+                <a href="${product}" class="link">Hazen NovaX</a>
+                <a href="${product}" class="link">Hazen Classic Desktop</a>
+            </div>
+            <div class="footer-item">
+                <h1>Viewer Guides</h1>
+                <a href="${home}">Home</a>
+                <a href="${product}">Menu</a>
+                <a href="${about}">About</a>
+                <a href="${news}">Contact</a><br>
+                <h1>Laptops</h1>
+                <a href="${product}" class="link">Hazen Quantum Lite</a>
+                <a href="${product}" class="link">Hazen Gaming Titan</a>
+                <a href="${product}" class="link">Hazen Titan Servers</a>
+                <a href="${product}" class="link">Hazen X-Desktop</a>
+                <a href="${product}" class="link">Hazen Creator Pro</a>
+                <a href="${product}" class="link">Hazen Aero Slim</a>
+                <a href="${product}" class="link">Hazen EdgeBook</a>
+                <a href="${product}" class="link">Hazen EvoMax</a><br>
+                <h1>Sounds</h1>
+                <a href="${product}" class="link">Hazen VR Headset 3.0</a>
+                <a href="${product}" class="link">Hazen Buds Pro</a>
+                <a href="${product}" class="link">Hazen Pro Sounds </a>
+                <a href="${product}" class="link">Hazen Sounds Mixer</a>
+            </div>
+        </div>
+        <hr style="border: 1.5px solid #cbcbcb; margin: 0 1rem;border-radius: 2px;">
+        <div class="mx-3" style="display: flex;justify-content: space-between;">
+            <p style="text-align: left;padding: 10px 0;">Copyright © 2023 CyberHazen™ Technologies LTD &emsp;
+                Privacy Policy | Terms of Use | Sales and Refunds </p>
+            <p style="padding: 10px 0;">Indonesia | United States</p>
+        </div>
+    </footer>
+    <!-- FOOTER END-->
     <!-- <script src="../assets/components/navbar.js"></script> -->
     <div class="cursor"></div>
     <div class="cursor-outline"></div>
@@ -152,15 +365,22 @@
                 navbar.style.transform = "translateY(0%)"
             } else {
                 navbar.style.transform = "translateY(-250%)"
+                document.querySelector('.burger').classList.remove('active');
+                document.querySelector('[burger-item]').classList.remove('d-block')
             }
         };
         document.querySelector('.burger').addEventListener('click', () => {
-            document.querySelector('.burger span:nth-child(1)').classList.toggle('act-1');
-            document.querySelector('.burger span:nth-child(2)').classList.toggle('act-2');
-            document.querySelector('.burger span:nth-child(3)').classList.toggle('act-3');
+            document.querySelector('.burger').classList.toggle('active');
             document.querySelector('[burger-item]').classList.toggle('d-block')
         })
 
+        document.addEventListener('click', function (e) {
+            if (!document.querySelector('.burger').contains(e.target)) {
+                document.querySelector('[burger-item]').classList.remove('d-block')
+                document.querySelector('.burger').classList.remove('active');
+
+            }
+        })
     </script>
     <script src="../assets/js/aos.js"></script>
     <script>

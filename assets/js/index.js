@@ -15,7 +15,7 @@ document.querySelectorAll('[hover]').forEach(element => {
     element.style.setProperty('--custom-hover', color);
 });
 
-let links = document.querySelectorAll('[type=link]');
+let links = document.querySelectorAll('a');
 let cursor = document.querySelector('.cursor');
 let cursorO = document.querySelector('.cursor-outline');
 window.addEventListener('mousemove', (e) => {
@@ -40,5 +40,36 @@ window.addEventListener('mousemove', (e) => {
             cursor.classList.remove("hover");
             cursorO.classList.remove("hoverO");
         })
+    })
+})
+
+const burgerNavElements = document.querySelectorAll('[burger-nav-name]');
+const modal = document.getElementById('modal');
+
+// Function to update the modal text based on the custom attribute
+function updateModalText(event) {
+    const burgerNavName = event.target.getAttribute('burger-nav-name');
+    modal.textContent = burgerNavName;
+    modal.classList.add('burger-nav-active')
+    
+}
+
+// Function to hide the modal when the user stops hovering
+function hideModal() {
+    modal.classList.remove('burger-nav-active')
+}
+
+// Attach event listeners to each burger nav element
+burgerNavElements.forEach(element => {
+    element.addEventListener('mouseover', updateModalText);
+    element.addEventListener('mouseout', hideModal);
+});
+
+// Loading
+window.addEventListener('load', () => {
+    document.querySelector('.loader').classList.add('d-none');
+
+    document.querySelector('.loader').addEventListener('transitionend', () => {
+        document.body.removeChild(document.querySelector('.loader'))
     })
 })
